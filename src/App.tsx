@@ -1,5 +1,38 @@
-function App() {
-  return <h1>Todo</h1>;
-}
+import styles from './App.module.css';
 
-export default App;
+export function App() {
+  return (
+    <main>
+      <div>Cabeçalho</div>
+
+      <section className={styles.content}>
+        <div className={styles.taskInfoContainer}>
+          <input />
+          <button>Criar</button>
+        </div>
+
+        <div className={styles.tasksList}>
+          <header>
+            <aside>
+              <p>Tarefas criadas</p>
+              <span>0</span>
+            </aside>
+
+            <aside>
+              <p>Concluídas</p>
+              <span>0</span>
+            </aside>
+          </header>
+
+          <div>
+            Imagem
+            <p>
+              <strong>Você ainda não tem tarefas cadastradas</strong>
+              Crie tarefas e organize seus iten a fazer
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
