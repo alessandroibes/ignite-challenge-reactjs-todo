@@ -4,6 +4,7 @@ import { Check, PlusCircle, Trash } from '@phosphor-icons/react';
 import { Header } from './components/Header';
 import { Input } from './components/Input';
 import { Button } from './components/Button';
+import { Header as ListHeader } from './components/List/Header';
 
 export function App() {
   return (
@@ -20,18 +21,7 @@ export function App() {
         </div>
 
         <div className={styles.tasksList}>
-          <header className={styles.listHeader}>
-            <aside>
-              <p>Tarefas criadas</p>
-              <span>4</span>
-            </aside>
-
-            <aside>
-              <p>Concluídas</p>
-              <span>2 de 4</span>
-            </aside>
-          </header>
-
+          <ListHeader tasksCounter={4} checkedTasksCounter={2} />
           <div>
             <div className={styles.item}>
               <div>
