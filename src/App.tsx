@@ -1,4 +1,4 @@
-import { PlusCircle } from '@phosphor-icons/react';
+import { Check, PlusCircle, Trash } from '@phosphor-icons/react';
 
 import styles from './App.module.css';
 
@@ -31,12 +31,95 @@ export function App() {
             </aside>
           </header>
 
-          <div className={styles.empty}>
-            <img src="/clipboard.png" alt="ícone de prancheta" />
-            <p>
-              <strong>Você ainda não tem tarefas cadastradas</strong>
-              Crie tarefas e organize seus iten a fazer
-            </p>
+          <div>
+            <div className={styles.item}>
+              <div>
+                <label>
+                  <input readOnly type="checkbox" />
+                  <span
+                    className={`${styles.checkbox} ${styles['checkbox-unchecked']}`}
+                  >
+                    <Check size={12} />
+                  </span>
+
+                  <p
+                    className={`${styles.paragraph} ${styles['paragraph-unchecked']}`}
+                  >
+                    Exemplo de Task 4
+                  </p>
+                </label>
+              </div>
+
+              <button>
+                <Trash size={16} color="#808080" />
+              </button>
+            </div>
+            <div className={styles.item}>
+              <div>
+                <label>
+                  <input readOnly type="checkbox" />
+                  <span
+                    className={`${styles.checkbox} ${styles['checkbox-unchecked']}`}
+                  >
+                    <Check size={12} />
+                  </span>
+
+                  <p
+                    className={`${styles.paragraph} ${styles['paragraph-unchecked']}`}
+                  >
+                    Exemplo de Task 3
+                  </p>
+                </label>
+              </div>
+
+              <button>
+                <Trash size={16} color="#808080" />
+              </button>
+            </div>
+            <div className={styles.item}>
+              <div>
+                <label>
+                  <input readOnly type="checkbox" />
+                  <span
+                    className={`${styles.checkbox} ${styles['checkbox-checked']}`}
+                  >
+                    <Check size={12} />
+                  </span>
+
+                  <p
+                    className={`${styles.paragraph} ${styles['paragraph-checked']}`}
+                  >
+                    Exemplo de Task 2
+                  </p>
+                </label>
+              </div>
+
+              <button>
+                <Trash size={16} color="#808080" />
+              </button>
+            </div>
+            <div className={styles.item}>
+              <div>
+                <label>
+                  <input readOnly type="checkbox" />
+                  <span
+                    className={`${styles.checkbox} ${styles['checkbox-checked']}`}
+                  >
+                    <Check size={12} />
+                  </span>
+
+                  <p
+                    className={`${styles.paragraph} ${styles['paragraph-checked']}`}
+                  >
+                    Exemplo de Task 1
+                  </p>
+                </label>
+              </div>
+
+              <button>
+                <Trash size={16} color="#808080" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
