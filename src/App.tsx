@@ -57,6 +57,14 @@ export function App() {
     setTasks(updatedTasks);
   }
 
+  const checkedTasksCounter = tasks.reduce((prevValue, currentTask) => {
+    if (currentTask.isChecked) {
+      return prevValue + 1;
+    }
+
+    return prevValue;
+  }, 0);
+
   return (
     <main>
       <Header />
@@ -74,7 +82,10 @@ export function App() {
         </div>
 
         <div className={styles.tasksList}>
-          <ListHeader tasksCounter={0} checkedTasksCounter={0} />
+          <ListHeader
+            tasksCounter={tasks.length}
+            checkedTasksCounter={checkedTasksCounter}
+          />
 
           {tasks.length > 0 ? (
             <div>
