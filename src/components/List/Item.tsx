@@ -6,9 +6,14 @@ import styles from './Item.module.css';
 
 interface Props {
   data: ITask;
+  removeTask: (id: number) => void;
 }
 
-export function Item({ data }: Props) {
+export function Item({ data, removeTask }: Props) {
+  function handleRemove() {
+    removeTask(data.id);
+  }
+
   const checkboxCheckedClassname = data.isChecked
     ? styles['checkbox-checked']
     : styles['checkbox-unchecked'];
@@ -31,7 +36,7 @@ export function Item({ data }: Props) {
         </label>
       </div>
 
-      <button>
+      <button onClick={handleRemove}>
         <Trash size={16} color="#808080" />
       </button>
     </div>

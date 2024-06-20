@@ -35,6 +35,16 @@ export function App() {
     setInputValue('');
   }
 
+  function handleRemoveTask(id: number) {
+    const filteredTasks = tasks.filter(task => task.id !== id);
+
+    if (!confirm('Deseja mesmo apagar essa tarefa?')) {
+      return;
+    }
+
+    setTasks(filteredTasks);
+  }
+
   return (
     <main>
       <Header />
@@ -57,7 +67,7 @@ export function App() {
           {tasks.length > 0 ? (
             <div>
               {tasks.map(task => (
-                <Item key={task.id} data={task} />
+                <Item key={task.id} data={task} removeTask={handleRemoveTask} />
               ))}
             </div>
           ) : (
