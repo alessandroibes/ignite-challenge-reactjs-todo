@@ -1,14 +1,14 @@
 import { useState } from 'react';
+import { PlusCircle } from '@phosphor-icons/react';
 
 import styles from './App.module.css';
 
-import { PlusCircle } from '@phosphor-icons/react';
+import { Button } from './components/Button';
+import { Empty } from './components/List/Empty';
 import { Header } from './components/Header';
 import { Input } from './components/Input';
-import { Button } from './components/Button';
-import { Header as ListHeader } from './components/List/Header';
-import { Empty } from './components/List/Empty';
 import { Item } from './components/List/Item';
+import { Header as ListHeader } from './components/List/Header';
 
 export interface ITask {
   id: number;
