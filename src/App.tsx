@@ -2,6 +2,7 @@ import styles from './App.module.css';
 
 import { Check, PlusCircle, Trash } from '@phosphor-icons/react';
 import { Header } from './components/Header';
+import { Input } from './components/Input';
 
 export function App() {
   return (
@@ -10,7 +11,7 @@ export function App() {
 
       <section className={styles.content}>
         <div className={styles.taskInfoContainer}>
-          <input className={styles.input} />
+          <Input />
           <button className={styles.button}>
             Criar
             <PlusCircle size={16} color="#f2f2f2" weight="bold" />
