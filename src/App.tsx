@@ -45,6 +45,18 @@ export function App() {
     setTasks(filteredTasks);
   }
 
+  function handleToggleTask({ id, value }: { id: number; value: boolean }) {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, isChecked: value };
+      }
+
+      return { ...task };
+    });
+
+    setTasks(updatedTasks);
+  }
+
   return (
     <main>
       <Header />
@@ -67,7 +79,12 @@ export function App() {
           {tasks.length > 0 ? (
             <div>
               {tasks.map(task => (
-                <Item key={task.id} data={task} removeTask={handleRemoveTask} />
+                <Item
+                  key={task.id}
+                  data={task}
+                  removeTask={handleRemoveTask}
+                  toggleTaskStatus={handleToggleTask}
+                />
               ))}
             </div>
           ) : (
