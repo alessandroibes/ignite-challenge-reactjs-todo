@@ -1,13 +1,12 @@
-import { Check, PlusCircle, Trash } from '@phosphor-icons/react';
-
 import styles from './App.module.css';
+
+import { Check, PlusCircle, Trash } from '@phosphor-icons/react';
+import { Header } from './components/Header';
 
 export function App() {
   return (
     <main>
-      <div className={styles.header}>
-        <img src="/logo.svg" alt="logo da aplicação" />
-      </div>
+      <Header />
 
       <section className={styles.content}>
         <div className={styles.taskInfoContainer}>
