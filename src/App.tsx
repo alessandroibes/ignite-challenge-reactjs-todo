@@ -3,7 +3,9 @@ import styles from './App.module.css';
 export function App() {
   return (
     <main>
-      <div>Cabeçalho</div>
+      <div className={styles.header}>
+        <img src="/logo.svg" alt="logo da aplicação" />
+      </div>
 
       <section className={styles.content}>
         <div className={styles.taskInfoContainer}>
