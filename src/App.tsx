@@ -19,7 +19,7 @@ export function App() {
         </div>
 
         <div className={styles.tasksList}>
-          <header>
+          <header className={styles.listHeader}>
             <aside>
               <p>Tarefas criadas</p>
               <span>0</span>
@@ -31,8 +31,8 @@ export function App() {
             </aside>
           </header>
 
-          <div>
-            Imagem
+          <div className={styles.empty}>
+            <img src="/clipboard.png" alt="ícone de prancheta" />
             <p>
               <strong>Você ainda não tem tarefas cadastradas</strong>
               Crie tarefas e organize seus iten a fazer
