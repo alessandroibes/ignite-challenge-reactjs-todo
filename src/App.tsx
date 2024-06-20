@@ -22,12 +22,12 @@ export function App() {
           <header className={styles.listHeader}>
             <aside>
               <p>Tarefas criadas</p>
-              <span>0</span>
+              <span>4</span>
             </aside>
 
             <aside>
               <p>Concluídas</p>
-              <span>0</span>
+              <span>2 de 4</span>
             </aside>
           </header>
 

@@ -140,6 +140,16 @@
   font-size: 0.875rem;
 }
 
+.listHeader aside span {
+  padding: 2px 8px;
+  border-radius: 16px;
+
+  font-size: 0.75rem;
+
+  color: var(--gray-200);
+  background-color: var(--gray-400);
+}
+
 .item {
   display: flex;
   flex: 1;
